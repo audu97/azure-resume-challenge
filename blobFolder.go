@@ -41,7 +41,7 @@ func NewBlobFolder(ctx *pulumi.Context, containerName string, siteDir string, ar
 	if err != nil {
 		return nil, err
 	}
-
+	//creating a static website
 	staticWebsite, err := storage.NewStorageAccountStaticWebsite(ctx, "staticWebsite", &storage.StorageAccountStaticWebsiteArgs{
 		AccountName:       account.Name,
 		ResourceGroupName: resourceGroup.Name,
